@@ -1,0 +1,36 @@
+import time
+meme_dict = {
+    "CRINGE": "Algo excepcionalmente raro o embarazoso",
+    "LOL": "Una respuesta común a algo gracioso",
+    "ROFL": "Una respuesta a una broma",
+    "SHEESH": "Ligera desaprobación",
+    "CREEPY": "Aterrador, siniestro",
+    "AGGRO": "Ponerse agresivo/enojado",
+    "MEME": "Imagen o idea humorística que se difunde ampliamente en internet",
+    "FACEPALM": "Gesto de golpear la frente con la palma de la mano, generalmente en respuesta a algo tonto",
+    "EPICO": "Algo grandioso o impresionante",
+    "NOOB": "Persona inexperta o novata",
+    "EPIC FAIL": "Fracaso impresionante",
+    "OMG": "Oh, mi dios",
+    "BRB": "Vuelvo enseguida",
+    "YOLO": "Solo se vive una vez"
+}
+
+# Saludo e instrucciones
+print("¡Bienvenido al Diccionario de Memes!")
+time.sleep(2)
+print("Te ayudaré a entender algunos términos de internet. Ingresa palabras en MAYÚSCULAS.")
+time.sleep(2)
+# Bucle para preguntar 5 palabras
+for i in range(5):
+    # Solicitar la palabra al usuario
+    word = input("Escribe una palabra que no entiendas:")
+
+    # Procesar la solicitud del usuario
+    if word in meme_dict.keys():
+        print("¡Entendido! ",word," significa: ",meme_dict[word])
+    else:
+        print("Lo siento, no tengo información sobre la palabra",word)
+
+# Mensaje de despedida
+print("Gracias por usar el Diccionario de Memes. ¡Hasta luego!")
