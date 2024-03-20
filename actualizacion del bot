@@ -1,0 +1,99 @@
+import discord
+from discord.ext import commands
+
+from bot_logic import *
+import random
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'We have logged in as {bot.user}')
+    print('------')
+
+@bot.event
+async def on_connect():
+    for guild in bot.guilds:
+        if guild.text_channels:
+            default_channel = guild.text_channels[0]
+            await default_channel.send(f'Hola! Soy {bot.user.name}, estoy listo para servir en {guild.name}! Aquí tienes los comandos disponibles:')
+            await default_channel.send("$hello: Saludar al bot")
+            await default_channel.send("$function: Ver las funciones disponibles")
+            await default_channel.send("$smile: Genera un emoji")    
+            await default_channel.send("$coin: Elige una cara de la moneda al azar")
+            await default_channel.send("$passw: Crea una contraseña de 10 palabras")
+            await default_channel.send("$joke: Te da un chiste")
+            await default_channel.send("$meme: Te da un meme")
+            await default_channel.send("$add: Suma dos números")
+            await default_channel.send("$repeat [times] [content]: Repite un mensaje múltiples veces")
+            await default_channel.send("$roll [NdN]: Lanza un dado en formato NdN")
+        else:
+            print(f"No se encontraron canales de texto en el servidor {guild.name}.")
+
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f'Hola, soy un bot {bot.user}!')
+
+@bot.command()
+async def function(ctx):
+    await ctx.send("esto es lo que puedes hacer conmigo:")
+    await ctx.send("$smile: genera un emoji")    
+    await ctx.send("$coin: elige una cara de la moneda al azar")
+    await ctx.send("$pass: crea una contraseña de 10 palabras")
+    await ctx.send("$joke: te da un chiste")
+    await ctx.send("$meme: te da un meme")                       
+
+@bot.command()
+async def smile(ctx):
+    await ctx.send(gen_emodji())
+
+@bot.command()
+async def coin(ctx):
+    await ctx.send(flip_coin())
+
+@bot.command()
+async def joke(ctx):
+    await ctx.send("el chiste del dia es:")
+    await ctx.send(gen_joke())
+
+@bot.command()
+async def meme(ctx):
+    await ctx.send(gen_meme())
+
+@bot.command()
+async def passw(ctx):
+    await ctx.send("tu contraseña es:")
+    await ctx.send(gen_pass(10))
+
+@bot.event
+async def on_message(message):
+    if message.author == bot.user:
+        return
+    await bot.process_commands(message)
+
+@bot.command()
+async def add(ctx, left: int, right: int):
+    """Adds two numbers together."""
+    await ctx.send(left + right)
+
+@bot.command()
+async def repeat(ctx, times: int, content='repeating...'):
+    """Repeats a message multiple times."""
+    for i in range(times):
+        await ctx.send(content)
+
+@bot.command()
+async def roll(ctx, dice: str):
+    """Rolls a dice in NdN format."""
+    try:
+        rolls, limit = map(int, dice.split('d'))
+    except Exception:
+        await ctx.send('Format has to be in NdN!')
+        return
+    result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
+    await ctx.send(result)
+
+bot.run("token")
