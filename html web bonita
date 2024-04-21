@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Dependencia de las Computadoras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>La Dependencia de las Computadoras</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Impacto en la Sociedad</h2>
+            <p>La creciente dependencia de las computadoras ha tenido un impacto significativo en la sociedad. Por un lado, ha simplificado muchas tareas y mejorado la eficiencia en diversos campos, como la medicina, la educación y la comunicación. Sin embargo, también ha planteado desafíos, como la brecha digital y la adicción a la tecnología.</p>
+        </section>
+        <section>
+            <h2>Importancia de la Alfabetización Digital</h2>
+            <p>Con la creciente dependencia de las computadoras, la alfabetización digital se ha vuelto crucial. No solo implica saber cómo usar hardware y software, sino también comprender los conceptos básicos de seguridad cibernética y la capacidad de discernir información confiable en línea.</p>
+        </section>
+        <section>
+            <h2>El Futuro de la Dependencia Tecnológica</h2>
+            <p>Con el avance continuo de la tecnología, es probable que nuestra dependencia de las computadoras siga aumentando en el futuro. Esto plantea importantes preguntas sobre cómo mitigar los riesgos asociados y garantizar un uso responsable y ético de la tecnología.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Desarrollado por <a href="https://www.tupagina.com">Alberto</a></p>
+    </footer>
+</body>
+</html>
