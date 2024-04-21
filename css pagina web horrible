@@ -1,0 +1,31 @@
+body {
+  font-family: Comic Sans MS, cursive, sans-serif; /* Fuente muy poco profesional */
+  font-size: 24px; /* Tamaño de fuente muy grande */
+  background-color: magenta; /* Fondo muy brillante */
+  color: yellow; /* Texto difícil de leer */
+}
+
+h1 {
+  text-align: center; /* Encabezado centrado */
+  text-decoration: underline; /* Subrayado horrible */
+  animation: shake 0.5s infinite; /* Animación de sacudida */
+}
+
+h2 {
+  text-align: center; /* Encabezado centrado */
+  text-decoration: underline; /* Subrayado horrible */
+  animation: shake 0.5s infinite; /* Animación de sacudida */
+}
+
+p {
+  text-align: justify; /* Justificado (más difícil de leer) */
+  color: lime; /* Texto difícil de leer */
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
