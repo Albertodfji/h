@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>La Dependencia de las Computadoras</title>
+</head>
+<body>
+    <h1>La Dependencia de las Computadoras</h1>
+    <p>En la era digital actual, las computadoras se han convertido en una parte esencial de la vida cotidiana. Desde el trabajo hasta el entretenimiento, dependemos cada vez más de estas poderosas máquinas para diversas tareas.</p>
+    
+    <h2>Impacto en la Sociedad</h2>
+    <p>La creciente dependencia de las computadoras ha tenido un impacto significativo en la sociedad. Por un lado, ha simplificado muchas tareas y mejorado la eficiencia en diversos campos, como la medicina, la educación y la comunicación. Sin embargo, también ha planteado desafíos, como la brecha digital y la adicción a la tecnología.</p>
+    
+    <h2>Importancia de la Alfabetización Digital</h2>
+    <p>Con la creciente dependencia de las computadoras, la alfabetización digital se ha vuelto crucial. No solo implica saber cómo usar hardware y software, sino también comprender los conceptos básicos de seguridad cibernética y la capacidad de discernir información confiable en línea.</p>
+    
+    <h2>El Futuro de la Dependencia Tecnológica</h2>
+    <p>Con el avance continuo de la tecnología, es probable que nuestra dependencia de las computadoras siga aumentando en el futuro. Esto plantea importantes preguntas sobre cómo mitigar los riesgos asociados y garantizar un uso responsable y ético de la tecnología.</p>
+    
+    <img src="https://tse1.mm.bing.net/th?id=OIP.kY9r7nI2Eq_UR0IJdSFr8gHaEt&pid=Api&P=0&h=180" alt="Image 1">
+    <img src="https://conocelahistoria.com/wp-content/uploads/2018/03/computadora-intel-core2duo-D_NQ_NP_855744-MLM26526881088_122017-F-1024x768.jpg" alt="Image 2">
+    <img src="https://4.bp.blogspot.com/-95qaXK1g_Rk/TWRzECDO3NI/AAAAAAAAAAk/QffQalt3C1s/s1600/PC%252BMonitor-LCD19-perfil.jpg" alt="Image 3">
+    <iframe src="https://www.meteoblue.com/en/weather/widget/daily/ip_romania_675514?geoloc=fixed&days=7&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&spot=1&pressure=0&layout=light"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 378px; height: 420px"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/week/ip_romania_675514?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank" rel="noopener">meteoblue</a></div>
+</body>
+</html>
