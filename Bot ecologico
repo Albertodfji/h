@@ -1,0 +1,52 @@
+import discord
+from discord.ext import commands
+import os
+from bot_logic import *
+import random
+import requests
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_connect():
+    for guild in bot.guilds:
+        if guild.text_channels:
+            default_channel = guild.text_channels[0]
+            await default_channel.send(f'Hola! Soy {bot.user.name}, estoy listo para servir en {guild.name}"Que informacion quieres saber sobre la contaminacion')
+            await default_channel.send("$contaminacion1: contaminacion Ambiental")
+            await default_channel.send("$contaminacion2: contaminacion Visual")
+            await default_channel.send("$contaminacion3: contaminacion auditiva")
+            await default_channel.send("$Residuo:dile que puede ser un residuo")
+
+@bot.command()
+async def contaminacion1(ctx):
+    # Aquí puedes proporcionar información sobre la contaminación ambiental
+    await ctx.send("1. Contaminación Ambiental: Se refiere a la presencia en el ambiente de cualquier agente físico, químico o biológico, en concentraciones que pueden ser dañinas para la salud humana o para el medio ambiente. Esto puede incluir contaminación del aire, agua, suelo y ruido.\n\n")
+
+@bot.command()
+async def contaminacion2(ctx):
+    # Aquí puedes proporcionar información sobre la contaminación visual
+    await ctx.send("2. Contaminación Visual: Se refiere a la presencia de elementos visuales no deseados que causan molestia, estrés o afectan la estética del entorno. Ejemplos incluyen vallas publicitarias, cables eléctricos y basura en las calles.\n\n")
+
+@bot.command()
+async def contaminacion3(ctx):
+    # Aquí puedes proporcionar información sobre la contaminación auditiva
+    await ctx.send("Contaminación Auditiva: Se refiere a la presencia de sonidos no deseados o excesivos que pueden causar molestias, interferir con actividades diarias o afectar la salud auditiva. Ejemplos incluyen el ruido del tráfico, música alta y maquinaria industrial.")
+
+bot.command()
+async def residuo(ctx, *, objeto: str):
+    objeto = objeto.lower()
+    basura = ['papel higiénico', 'pañuelos de papel', 'colillas de cigarro', 'pañales', 'chicles', 'compresas', 'cepillos de dientes']
+    reciclable = ['botellas de plástico', 'latas de refresco', 'papel', 'cartón', 'envases de vidrio']
+    
+    if objeto in basura:
+        await ctx.send(f'El objeto "{objeto}" debe ir a la basura.')
+    elif objeto in reciclable:
+        await ctx.send(f'El objeto "{objeto}" se puede reciclar.')
+    else:
+        await ctx.send(f'Lo siento, no tengo información sobre cómo desechar el objeto "{objeto}".')
+
+bot.run("token")
